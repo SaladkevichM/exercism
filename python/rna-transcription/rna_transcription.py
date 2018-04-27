@@ -5,6 +5,10 @@ def to_rna(dna_strand):
 # T -> A
 # A -> U
 
-    
+    dict = {"G":"C", "C":"G", "T":"A", "A":"U" }
 
-    return dna_strand
+    rna = ""
+    for i in range(0,len(dna_strand)):
+        rna += dict[dna_strand[i]]
+
+    return rna
